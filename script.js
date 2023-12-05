@@ -36,57 +36,16 @@ function updateCarousel() {
 setInterval(nextSlide, 3000);
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const selectElement = document.querySelector(".asistencia-select");
-    const select2 = document.querySelector(".cantidad-select");
-    const labelCanto=document.querySelector(".label-selecCant");
-    const button=document.querySelector(".button-confirmacion");
-    selectElement.addEventListener("change", function() {
-        const selectedIndex = selectElement.selectedIndex;
-        console.log("Índice seleccionado: " + selectedIndex);
-        if (selectedIndex  === 1) {
-            labelCanto.style.display="block";
-            select2.style.display = "block";
-            button.style.display="block";
-          } else {
-            labelCanto.style.display="none";
-            select2.style.display = "none";
-            button.style.display="none";
-            invitadosContainer.innerHTML = "";
-          }
-    });
-var invitadosContainer = document.getElementById("invitados-container");
-select2.addEventListener("change", function () {
-    var cantidadInvitados = parseInt(select2.value);
-    // Limpia el contenedor antes de agregar nuevos inputs
-    invitadosContainer.innerHTML = "";
-    // Agrega los inputs de texto según la cantidad seleccionada
-    for (var i = 0; i < cantidadInvitados; i++) {
-      var input = document.createElement("input");
-      input.type = "text";
-      input.name="nombreYapellido";
-      input.id="nombreYapellido";
-      input.placeholder = "Nombre y Apellido invitado" + (i + 1);
-      invitadosContainer.appendChild(input);
-    }
-    button.style.display="block";
-  });
-});
 
-const formElement =document.getElementById('saveInvitados');
 
-/*formElement.addEventListener("submit",(event)=>{
-  event.preventDefault();
-  let invitado
-  invitado=document.getElementById("nombreYapellido").value;
-  let invitados={NombreYApellido: invitado}
-  let invitadoJson=JSON.stringify(invitados)
- 
 
-  console.log(invitadoJson);
-  fetch('http://localhost:3000/proceso',{
-    mode:"no-cors",
-    method: 'Post',
-    body: invitadoJson
-  })
-})*/
+
+
+const miAudio2=new Audio()
+miAudio2.src='./assets/invitacion.mp3'
+
+function repro(){
+  return miAudio2.play();
+}
+
+
