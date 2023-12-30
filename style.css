@@ -185,6 +185,29 @@ h3{
 
     
 }
+.container_regalo{
+    border: black 1px solid;
+}
+.imgRegalo{
+    margin-top: 10px;
+    display: block;
+    margin: auto;
+    width: 5%;
+    animation: bounce;
+    -webkit-animation: bounce 1s infinite;
+}
+.texto_regalo{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    font-size: 25px;
+}
+.texto_cbu{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
 
 .container-info{
     display: grid;
