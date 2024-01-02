@@ -192,7 +192,7 @@ h3{
     margin-top: 10px;
     display: block;
     margin: auto;
-    width: 5%;
+    width: 10%;
     animation: bounce;
     -webkit-animation: bounce 1s infinite;
 }
@@ -503,5 +503,8 @@ text-align: center;
         border-radius: 50%;
         margin: auto;
     
+    }
+    .texto_cbu{
+        font-size: 15px;
     }
 }
